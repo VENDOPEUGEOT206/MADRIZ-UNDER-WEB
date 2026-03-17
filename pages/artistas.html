@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artistas — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html" class="active">Artistas ▾</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch ▾</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html">Graffiti ▾</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <h1 class="section-title animate-slide">Artistas</h1>
+  <div class="cards-grid">
+    <a href="al_safir.html" class="card animate-spray" style="animation-delay:0.1s">
+      <img src="../img/AL_SAFIR.webp" alt="Al Safir"/>
+      <div class="card-body">
+        <div class="card-title">Al Safir</div>
+        <div class="card-sub">MC · Madrid</div>
+        <p class="card-desc">Uno de los nombres más respetados del rap madrileño con raíces árabes y versos de barrio.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="sdj_crew.html" class="card animate-spray" style="animation-delay:0.2s">
+      <img src="../img/SDJ_CREW.jpg" alt="SDJ Crew"/>
+      <div class="card-body">
+        <div class="card-title">SDJ Crew</div>
+        <div class="card-sub">Crew · Madrid</div>
+        <p class="card-desc">Crew de referencia en la escena underground madrileña. Letras crudas, beats sólidos.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="hijos_bastardos.html" class="card animate-spray" style="animation-delay:0.3s">
+      <img src="../img/HIJOS_BASTARDOS.jpg" alt="Hijos Bastardos"/>
+      <div class="card-body">
+        <div class="card-title">Hijos Bastardos</div>
+        <div class="card-sub">Grupo · Canillejas – Barajas – Ciudad Pegaso</div>
+        <p class="card-desc">Desde el este de Madrid llegan los Hijos Bastardos Music Company, con un sello propio y sonido reconocible.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="hijos_de_la_ruina.html" class="card animate-spray" style="animation-delay:0.4s">
+      <img src="../img/HIJOS_DE_LA_RUINA.jpg" alt="Hijos de la Ruina"/>
+      <div class="card-body">
+        <div class="card-title">Hijos de la Ruina</div>
+        <div class="card-sub">Grupo · Madrid</div>
+        <p class="card-desc">Rap con actitud, calle y sin filtros. Los Hijos de la Ruina no piden permiso.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="gamberros_pro.html" class="card animate-spray" style="animation-delay:0.5s">
+      <img src="../img/GAMBERROS_PRO.webp" alt="Gamberros Pro"/>
+      <div class="card-body">
+        <div class="card-title">Gamberros Pro</div>
+        <div class="card-sub">Colectivo · Madrid</div>
+        <p class="card-desc">All Stars de la escena. Gamberros Pro reúne a lo mejor del underground madrileño.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

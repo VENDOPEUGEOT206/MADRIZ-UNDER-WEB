@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karen — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html">Artistas &#9660;</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch &#9660;</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html">Graffiti &#9660;</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="hero-perfil">
+    <img src="../img/KAREN.webp" alt="Karen"/>
+    <div class="hero-perfil-overlay">
+      <h1 class="hero-perfil-title">Karen</h1>
+      <p class="hero-perfil-sub">Writer · Madrid — 30 años en la brecha</p>
+    </div>
+  </div>
+  <div class="perfil-content animate-slide">
+    
+    <h2>Historia</h2>
+    <p>La figura de Karen representa uno de los pilares más sólidos de la cultura del bombing en Madrid. Su historia está ligada a una presencia incansable en las calles, donde ha logrado lo que pocos: mantenerse activo durante décadas con una constancia que bordea la ubicuidad. Lejos de buscar la abstracción o el barroquismo, Karen ha perfeccionado un estilo de letras de <em>pompa</em> y piezas de plata que destacan por su limpieza técnica y legibilidad. Esta apuesta por la claridad ha hecho que su nombre sea una marca registrada en el subconsciente visual de cualquier madrileño, desde los barrios del sur hasta las líneas de Metro y Cercanías.</p>
+<p>Su influencia en el panorama nacional se fundamenta en una ética de trabajo inquebrantable. Karen es el ejemplo vivo de que la cantidad no tiene por qué estar reñida con la calidad; sus trazos son firmes y sus proporciones siempre equilibradas, incluso cuando se ejecutan bajo la presión del tiempo en lugares de difícil acceso. Ha influido en generaciones de escritores que ven en él un modelo de profesionalidad dentro de la ilegalidad, demostrando que para ser un referente no siempre hace falta saltar a las galerías de arte, sino dominar el espacio público con respeto por las formas clásicas.</p>
+<p>El legado de Karen en Madrid reside en su capacidad para generar consenso en una escena a menudo dividida. Es respetado tanto por los veteranos de la vieja escuela como por los nuevos escritores, quienes ven en su firma un estándar de lo que significa ser un grafitero de pura cepa. Al evitar las modas pasajeras y mantenerse fiel a una estética sólida y reconocible, Karen se ha convertido en algo más que un escritor de graffiti: es un icono de la resistencia del estilo tradicional frente a un entorno urbano cada vez más controlado.</p>
+
+    <h2>Libro / Merch</h2>
+    <p style='color:#aaa;margin-bottom:0.8rem'>Consigue el libro sobre la trayectoria de Karen en Writers Madrid:</p>
+    <a href="https://www.writersmadrid.es/libros/3359-la-vida-de-un-artista-karen-30-anos-en-la-brecha.html" target="_blank" class="btn-card" style="display:inline-block;margin-top:0.5rem">La vida de un artista — Karen 30 años en la brecha</a>
+
+    <h2>Silver Nights — Writers Madrid</h2>
+    <div class="yt-embed-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/EdPHHfOBSno?rel=0&modestbranding=1"
+    title="Silver Nights"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+  // Merch slider
+  document.querySelectorAll('.merch-slider-inner').forEach(function(track){
+    var items = track.querySelectorAll('.ms-item');
+    if(!items.length) return;
+    var total = items.length, vis = window.innerWidth <= 1299 ? 2 : 3, idx = 0;
+    function upd(){
+      var w = (track.parentElement.offsetWidth / vis);
+      items.forEach(function(el){ el.style.minWidth = w + 'px'; });
+      track.style.transform = 'translateX(-' + (idx * w) + 'px)';
+    }
+    var btn_p = track.parentElement.parentElement.querySelector('.ms-prev');
+    var btn_n = track.parentElement.parentElement.querySelector('.ms-next');
+    if(btn_p) btn_p.addEventListener('click', function(){ idx = Math.max(0, idx-1); upd(); });
+    if(btn_n) btn_n.addEventListener('click', function(){ idx = Math.min(total-vis, idx+1); upd(); });
+    upd();
+    window.addEventListener('resize', upd);
+  });
+</script>
+</body>
+</html>

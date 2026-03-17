@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madriz Under — Inicio</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="logo-link" href="index.html"><img src="img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <ul id="main-nav">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li>
+        <a href="pages/artistas.html">Artistas ▾</a>
+        <div class="dropdown">
+          <a href="pages/al_safir.html">Al Safir</a>
+          <a href="pages/sdj_crew.html">SDJ Crew</a>
+          <a href="pages/hijos_bastardos.html">Hijos Bastardos</a>
+          <a href="pages/hijos_de_la_ruina.html">Hijos de la Ruina</a>
+          <a href="pages/gamberros_pro.html">Gamberros Pro</a>
+        </div>
+      </li>
+      <li>
+        <a href="pages/merch.html">Merch ▾</a>
+        <div class="dropdown">
+          <a href="pages/merch.html#al-safir">Al Safir</a>
+          <a href="pages/merch.html#sdj-crew">SDJ Crew</a>
+          <a href="pages/merch.html#hijos-bastardos">Hijos Bastardos</a>
+          <a href="pages/merch.html#hijos-ruina">Hijos de la Ruina</a>
+          <a href="pages/merch.html#gamberros">Gamberros Pro</a>
+          <a href="pages/merch.html#hurtos">Hurtos</a>
+          <a href="pages/merch.html#ruso">Ruso</a>
+          <a href="pages/merch.html#sion">Sion</a>
+          <a href="pages/merch.html#reyse">Reyse</a>
+          <a href="pages/merch.html#karen">Karen</a>
+        </div>
+      </li>
+      <li>
+        <a href="pages/graffiti.html">Graffiti ▾</a>
+        <div class="dropdown">
+          <a href="pages/hurtos.html">Hurtos</a>
+          <a href="pages/ruso.html">Ruso</a>
+          <a href="pages/sion.html">Sion</a>
+          <a href="pages/reyse.html">Reyse</a>
+          <a href="pages/karen.html">Karen</a>
+        </div>
+      </li>
+      <li><a href="pages/conz_crew.html">Conz Crew</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- SLIDER ARTISTAS -->
+  <section class="slider-section">
+    <h2 class="section-title animate-slide">Artistas</h2>
+    <div class="slider-container" id="slider-artistas">
+      <div class="slider-track" id="track-artistas">
+        <div class="slide" onclick="location.href='pages/al_safir.html'">
+          <img src="img/AL_SAFIR.webp" alt="Al Safir"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Al Safir</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/sdj_crew.html'">
+          <img src="img/SDJ_CREW.jpg" alt="SDJ Crew"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">SDJ Crew</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/hijos_bastardos.html'">
+          <img src="img/HIJOS_BASTARDOS.jpg" alt="Hijos Bastardos"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Hijos Bastardos</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/hijos_de_la_ruina.html'">
+          <img src="img/HIJOS_DE_LA_RUINA.jpg" alt="Hijos de la Ruina"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Hijos de la Ruina</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/gamberros_pro.html'">
+          <img src="img/GAMBERROS_PRO.webp" alt="Gamberros Pro"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Gamberros Pro</span></div>
+        </div>
+      </div>
+      <button class="slider-btn prev" data-slider="artistas">&#8592;</button>
+      <button class="slider-btn next" data-slider="artistas">&#8594;</button>
+    </div>
+    <div class="slider-dots" id="dots-artistas">
+      <div class="slider-dot active" data-slider="artistas" data-idx="0"></div>
+      <div class="slider-dot" data-slider="artistas" data-idx="1"></div>
+      <div class="slider-dot" data-slider="artistas" data-idx="2"></div>
+      <div class="slider-dot" data-slider="artistas" data-idx="3"></div>
+      <div class="slider-dot" data-slider="artistas" data-idx="4"></div>
+    </div>
+  </section>
+
+  <!-- SLIDER GRAFFITI -->
+  <section class="slider-section">
+    <h2 class="section-title animate-slide">Graffiteros</h2>
+    <div class="slider-container" id="slider-graffiti">
+      <div class="slider-track" id="track-graffiti">
+        <div class="slide" onclick="location.href='pages/hurtos.html'">
+          <img src="img/HURTOS.webp" alt="Hurtos"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Hurtos</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/ruso.html'">
+          <img src="img/RUSO.jpg" alt="Ruso"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Ruso</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/sion.html'">
+          <img src="img/SION.jpg" alt="Sion"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Sion</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/reyse.html'">
+          <img src="img/REYSE.jpg" alt="Reyse"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Reyse</span></div>
+        </div>
+        <div class="slide" onclick="location.href='pages/karen.html'">
+          <img src="img/KAREN.webp" alt="Karen"/>
+          <div class="slide-overlay"><span class="slide-title animate-pulse">Karen</span></div>
+        </div>
+      </div>
+      <button class="slider-btn prev" data-slider="graffiti">&#8592;</button>
+      <button class="slider-btn next" data-slider="graffiti">&#8594;</button>
+    </div>
+    <div class="slider-dots" id="dots-graffiti">
+      <div class="slider-dot active" data-slider="graffiti" data-idx="0"></div>
+      <div class="slider-dot" data-slider="graffiti" data-idx="1"></div>
+      <div class="slider-dot" data-slider="graffiti" data-idx="2"></div>
+      <div class="slider-dot" data-slider="graffiti" data-idx="3"></div>
+      <div class="slider-dot" data-slider="graffiti" data-idx="4"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p>
+</footer>
+
+<script src="css/slider.js"></script>
+<script>
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

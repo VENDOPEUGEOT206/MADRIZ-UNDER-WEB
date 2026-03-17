@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruso — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html">Artistas &#9660;</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch &#9660;</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html">Graffiti &#9660;</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="hero-perfil">
+    <img src="../img/RUSO.jpg" alt="Ruso"/>
+    <div class="hero-perfil-overlay">
+      <h1 class="hero-perfil-title">Ruso</h1>
+      <p class="hero-perfil-sub">Writer · Madrid — DVE</p>
+    </div>
+  </div>
+  <div class="perfil-content animate-slide">
+    
+    <h2>Historia</h2>
+    <p>Hablar de Ruso es referirse a uno de los nombres más icónicos y prolíficos de la escena del graffiti madrileño, un escritor que personifica la transición entre la vieja escuela y la explosión del bombing moderno en la capital. Su historia está marcada por una presencia constante en las calles desde hace décadas, destacando por un estilo de letras de <em>pompa</em> (throw-ups) y piezas de plata que se han convertido en parte del mobiliario urbano de Madrid. Ruso no solo es un escritor de cantidad, sino un estratega del espacio: ha sabido colocar su nombre en lugares de máxima visibilidad, desde los muros de las líneas de Metro hasta las fachadas más altas, manteniendo una actividad que parece no tener fin.</p>
+<p>Su influencia en el panorama nacional es fundamental para entender el estilo madrileño de los años 2000. Ruso ayudó a definir una estética basada en la robustez y la eficacia: letras gordas, con mucho peso visual y un flow que prioriza la rapidez sin perder la forma. Ha sido un maestro para muchos escritores jóvenes que buscaban entender cómo moverse por la ciudad de forma inteligente. Su capacidad para ejecutar piezas impecables en condiciones de alta presión ha establecido un estándar de calidad en el graffiti ilegal, demostrando que la constancia es el valor supremo en esta cultura.</p>
+<p>El legado de Ruso se consolida por su pertenencia a grupos legendarios como los DVE, cuya actividad transformó la fisonomía de Madrid. A diferencia de otros que han buscado el reconocimiento en el arte contemporáneo, Ruso ha permanecido fiel a la esencia del asfalto, siendo un referente de integridad dentro del movimiento. Su firma es un símbolo de resistencia y veteranía; ver un <em>Ruso</em> fresco en la calle hoy en día es una confirmación de que el graffiti más auténtico de Madrid sigue reclamando su lugar en la ciudad.</p>
+
+    <h2>Silver Nights — Writers Madrid</h2>
+    <div class="yt-embed-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/9qs3LVB0iWw?rel=0&modestbranding=1"
+    title="Silver Nights"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+  // Merch slider
+  document.querySelectorAll('.merch-slider-inner').forEach(function(track){
+    var items = track.querySelectorAll('.ms-item');
+    if(!items.length) return;
+    var total = items.length, vis = window.innerWidth <= 1299 ? 2 : 3, idx = 0;
+    function upd(){
+      var w = (track.parentElement.offsetWidth / vis);
+      items.forEach(function(el){ el.style.minWidth = w + 'px'; });
+      track.style.transform = 'translateX(-' + (idx * w) + 'px)';
+    }
+    var btn_p = track.parentElement.parentElement.querySelector('.ms-prev');
+    var btn_n = track.parentElement.parentElement.querySelector('.ms-next');
+    if(btn_p) btn_p.addEventListener('click', function(){ idx = Math.max(0, idx-1); upd(); });
+    if(btn_n) btn_n.addEventListener('click', function(){ idx = Math.min(total-vis, idx+1); upd(); });
+    upd();
+    window.addEventListener('resize', upd);
+  });
+</script>
+</body>
+</html>

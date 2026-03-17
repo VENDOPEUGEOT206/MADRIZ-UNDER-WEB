@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reyse — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html">Artistas &#9660;</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch &#9660;</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html">Graffiti &#9660;</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="hero-perfil">
+    <img src="../img/REYSE.jpg" alt="Reyse"/>
+    <div class="hero-perfil-overlay">
+      <h1 class="hero-perfil-title">Reyse</h1>
+      <p class="hero-perfil-sub">Writer · Madrid — Heaven Spots</p>
+    </div>
+  </div>
+  <div class="perfil-content animate-slide">
+    
+    <h2>Historia</h2>
+    <p>Hablar de Reyse es referirse a uno de los nombres más omnipresentes y activos de la escena del graffiti madrileño contemporáneo. Su historia es la de un <em>escritor de guerra</em> que ha hecho del bombardeo extremo su seña de identidad, centrando su actividad en los lugares de máxima visibilidad y riesgo. A diferencia de otros artistas que buscan el detalle artístico pausado, Reyse ha cimentado su leyenda en la velocidad y la cantidad, convirtiéndose en una figura cuya firma aparece en casi cualquier rincón de la capital, desde las azoteas más altas hasta los cierres más céntricos, manteniendo una actividad frenética que pocos pueden igualar.</p>
+<p>Su influencia en el panorama de Madrid radica principalmente en su estética cruda y directa, muy ligada a la vertiente más agresiva del graffiti europeo. Reyse ha popularizado un estilo de letras que prioriza el impacto visual inmediato: trazos gruesos, rellenos sólidos y una estructura que, aunque bebe del graffiti clásico, se adapta perfectamente a la rapidez necesaria para pintar en zonas vigiladas. Ha servido de inspiración para una generación de escritores que valoran la conquista del espacio por encima del virtuosismo técnico, demostrando que el graffiti es, ante todo, una cuestión de actitud, riesgo y constancia.</p>
+<p>El legado de Reyse se define por su capacidad para dominar las alturas de la ciudad, destacando especialmente en sus intervenciones en cornisas y tejados, lo que en el argot se conoce como <em>heaven spots</em>. Su nombre se ha convertido en un referente de lo que significa estar en todas partes, influyendo en la forma en que los nuevos grafiteros entienden el entorno urbano como un tablero de juego vertical. Para muchos, Reyse representa la esencia pura del graffiti de calle: aquel que no pide permiso, que no busca la galería de arte y que sobrevive gracias a una disciplina de acero en la oscuridad de la noche madrileña.</p>
+
+    <h2>Silver Nights — Writers Madrid</h2>
+    <div class="yt-embed-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/74ZcUHL2BKA?rel=0&modestbranding=1"
+    title="Silver Nights"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+  // Merch slider
+  document.querySelectorAll('.merch-slider-inner').forEach(function(track){
+    var items = track.querySelectorAll('.ms-item');
+    if(!items.length) return;
+    var total = items.length, vis = window.innerWidth <= 1299 ? 2 : 3, idx = 0;
+    function upd(){
+      var w = (track.parentElement.offsetWidth / vis);
+      items.forEach(function(el){ el.style.minWidth = w + 'px'; });
+      track.style.transform = 'translateX(-' + (idx * w) + 'px)';
+    }
+    var btn_p = track.parentElement.parentElement.querySelector('.ms-prev');
+    var btn_n = track.parentElement.parentElement.querySelector('.ms-next');
+    if(btn_p) btn_p.addEventListener('click', function(){ idx = Math.max(0, idx-1); upd(); });
+    if(btn_n) btn_n.addEventListener('click', function(){ idx = Math.min(total-vis, idx+1); upd(); });
+    upd();
+    window.addEventListener('resize', upd);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graffiti — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html">Artistas ▾</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch ▾</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html" class="active">Graffiti ▾</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <h1 class="section-title animate-slide">Graffiteros</h1>
+  <div class="cards-grid">
+    <a href="hurtos.html" class="card animate-spray" style="animation-delay:0.1s">
+      <img src="../img/HURTOS.webp" alt="Hurtos"/>
+      <div class="card-body">
+        <div class="card-title">Hurtos</div>
+        <div class="card-sub">Writer · Madrid</div>
+        <p class="card-desc">Bubble style con influencias europeas. Activo en trenes y muros de la capital.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="ruso.html" class="card animate-spray" style="animation-delay:0.2s">
+      <img src="../img/RUSO.jpg" alt="Ruso"/>
+      <div class="card-body">
+        <div class="card-title">Ruso</div>
+        <div class="card-sub">Writer · Madrid</div>
+        <p class="card-desc">Estilo geométrico y constructivo. Letras de líneas duras que dominan el Metro de Madrid.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="sion.html" class="card animate-spray" style="animation-delay:0.3s">
+      <img src="../img/SION.jpg" alt="Sion"/>
+      <div class="card-body">
+        <div class="card-title">Sion</div>
+        <div class="card-sub">Writer · Madrid</div>
+        <p class="card-desc">Cos·Tra·Rap. Graffiti y rap unidos en una misma filosofía de barrio.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="reyse.html" class="card animate-spray" style="animation-delay:0.4s">
+      <img src="../img/REYSE.jpg" alt="Reyse"/>
+      <div class="card-body">
+        <div class="card-title">Reyse</div>
+        <div class="card-sub">Writer · Madrid</div>
+        <p class="card-desc">Bubble exagerado en colores pastel sobre viaductos y autopistas de la capital.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+    <a href="karen.html" class="card animate-spray" style="animation-delay:0.5s">
+      <img src="../img/KAREN.webp" alt="Karen"/>
+      <div class="card-body">
+        <div class="card-title">Karen</div>
+        <div class="card-sub">Writer · Madrid</div>
+        <p class="card-desc">Referente femenina del graffiti madrileño. Letras grandes, colores suaves, presencia rotunda.</p>
+        <span class="btn-card">Ver perfil</span>
+      </div>
+    </a>
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

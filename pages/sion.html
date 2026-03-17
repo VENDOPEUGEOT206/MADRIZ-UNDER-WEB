@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sion — Madriz Under</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+  <a class="logo-link" href="../index.html"><img src="../img/LOGO.png" alt="Madriz Under"/></a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav><ul id="main-nav">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="artistas.html">Artistas &#9660;</a><div class="dropdown"><a href="al_safir.html">Al Safir</a><a href="sdj_crew.html">SDJ Crew</a><a href="hijos_bastardos.html">Hijos Bastardos</a><a href="hijos_de_la_ruina.html">Hijos de la Ruina</a><a href="gamberros_pro.html">Gamberros Pro</a></div></li>
+    <li><a href="merch.html">Merch &#9660;</a><div class="dropdown"><a href="merch.html#al-safir">Al Safir</a><a href="merch.html#sdj-crew">SDJ Crew</a><a href="merch.html#hijos-bastardos">Hijos Bastardos</a><a href="merch.html#hijos-ruina">Hijos de la Ruina</a><a href="merch.html#gamberros">Gamberros Pro</a><a href="merch.html#hurtos">Hurtos</a><a href="merch.html#ruso">Ruso</a><a href="merch.html#sion">Sion</a><a href="merch.html#reyse">Reyse</a><a href="merch.html#karen">Karen</a></div></li>
+    <li><a href="graffiti.html">Graffiti &#9660;</a><div class="dropdown"><a href="hurtos.html">Hurtos</a><a href="ruso.html">Ruso</a><a href="sion.html">Sion</a><a href="reyse.html">Reyse</a><a href="karen.html">Karen</a></div></li>
+    <li><a href="conz_crew.html">Conz Crew</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="hero-perfil">
+    <img src="../img/SION.jpg" alt="Sion"/>
+    <div class="hero-perfil-overlay">
+      <h1 class="hero-perfil-title">Sion</h1>
+      <p class="hero-perfil-sub">Writer · Madrid — Silver & Black</p>
+    </div>
+  </div>
+  <div class="perfil-content animate-slide">
+    
+    <h2>Historia</h2>
+    <p>Al hablar de Sion, entramos en el terreno de uno de los escritores más prolíficos y respetados de la liga de campeones del graffiti madrileño. Su historia es la de un veterano que ha sabido evolucionar sin perder un ápice de agresividad en la calle. Sion es reconocido por ser un maestro del bombardeo masivo, pero con un giro técnico que lo diferencia de la mayoría: posee una capacidad asombrosa para adaptar sus letras a cualquier superficie, desde los cierres más rugosos del centro de Madrid hasta los muros de las autopistas, manteniendo siempre una estructura de letra envidiable y un flow que parece natural.</p>
+<p>Su influencia en el panorama nacional es inmensa, especialmente por su rol como referente del estilo <em>Silver &amp; Black</em> (plata y negro). Sion ha dictado cátedra sobre cómo una pieza de colores básicos puede tener tanta fuerza visual como una producción de diez colores si la estructura de las letras es sólida. Ha inspirado a generaciones enteras a entender que el graffiti no es solo manchar, sino dominar la tipografía bajo presión. Su nombre es sinónimo de calidad técnica en cantidad industrial, demostrando que se puede ser uno de los escritores más activos de la ciudad sin descuidar el estilo artístico.</p>
+<p>El legado de Sion se consolida a través de su pertenencia a crews de alto nivel que han definido la estética de Madrid en las últimas décadas. Su figura representa la resistencia del graffiti clásico: ese que se hace por y para la calle, alejado de las pretensiones del arte contemporáneo comercial. Ver un <em>Sion</em> en una azotea o en una carretera es ver un sello de garantía; es la prueba de que el graffiti madrileño sigue vivo, fuerte y fiel a sus raíces de visibilidad extrema y respeto por la letra.</p>
+
+    <h2>Silver Nights — Writers Madrid</h2>
+    <div class="yt-embed-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/3vzq-0R5RFg?rel=0&modestbranding=1"
+    title="Silver Nights"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+  </div>
+</main>
+<footer><p>&copy; 2025 <span>Madriz Under</span> — Hecho con spray y flows desde la capital</p></footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+  // Merch slider
+  document.querySelectorAll('.merch-slider-inner').forEach(function(track){
+    var items = track.querySelectorAll('.ms-item');
+    if(!items.length) return;
+    var total = items.length, vis = window.innerWidth <= 1299 ? 2 : 3, idx = 0;
+    function upd(){
+      var w = (track.parentElement.offsetWidth / vis);
+      items.forEach(function(el){ el.style.minWidth = w + 'px'; });
+      track.style.transform = 'translateX(-' + (idx * w) + 'px)';
+    }
+    var btn_p = track.parentElement.parentElement.querySelector('.ms-prev');
+    var btn_n = track.parentElement.parentElement.querySelector('.ms-next');
+    if(btn_p) btn_p.addEventListener('click', function(){ idx = Math.max(0, idx-1); upd(); });
+    if(btn_n) btn_n.addEventListener('click', function(){ idx = Math.min(total-vis, idx+1); upd(); });
+    upd();
+    window.addEventListener('resize', upd);
+  });
+</script>
+</body>
+</html>
